@@ -409,8 +409,8 @@ export default {
 
 ```
 
-* The :class binding dynamically applies the headingClass to the <h1> element.
-* The :style binding applies inline styles from the paragraphStyle object to the <p> element.
+* The ```:class``` binding dynamically applies the ```headingClass``` to the ```<h1>``` element.
+* The ```:style``` binding applies inline styles from the ```paragraphStyle``` object to the ```<p>``` element.
 
 ## Two-Way Data Binding with v-model
 
