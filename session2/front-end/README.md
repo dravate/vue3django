@@ -126,5 +126,6 @@ The code creates the Vue instance and mounts that on DOM element with the id "ap
 
 # Root Component of the Vue 
 
+![Root Component Image](../help_images/vue3-django-root.jpg)
 
 
