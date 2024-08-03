@@ -1,0 +1,28 @@
+<template>
+  <div id="app">
+    <h1 :class="headingClass">{{ message }}</h1>
+    <p :style="paragraphStyle">This is a styled paragraph.</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello, Vue 3!',
+      headingClass: 'heading',
+      paragraphStyle: {
+        color: 'blue',
+        fontSize: '20px'
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.heading {
+  color: red;
+}
+</style>
+
