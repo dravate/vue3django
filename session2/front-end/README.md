@@ -124,5 +124,7 @@ This code imports createApp from vue, also imports the root component (App.vue),
 The code creates the Vue instance and mounts that on DOM element with the id "app" 
 
 
+# Root Component of the Vue 
+
 
 
