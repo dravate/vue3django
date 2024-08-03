@@ -232,4 +232,208 @@ The front-end looks as follow:
 
 ![Methods & Methods](../help_images/vue3-properties-methods.png)
 
+# Lifesycle Hooks 
+
+Copy the following code in ```src/App.vue```
+
+```
+<template>
+
+ <div id="app">
+    <p>{{ message }}</p>
+  </div>
+</template>
+
+<script>
+
+
+export default {
+  data() {
+    return {
+      message: 'Hello, Vue 3!'
+    }
+  },
+  created() {
+    console.log('Component created');
+  },
+  mounted() {
+    console.log('Component mounted');
+  },
+  updated() {
+    console.log('Component updated');
+  },
+  beforeUnmount() {
+    console.log('Component about to be unmounted');
+  }
+}
+
+
+
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+```
+
+The same code is available in ```src/App.vue.4``` too
+
+You can see some of the logs inside browser console (go via inspect way in chrome) 
  
+![Lifecycle Hooks](../help_images/vue3-lifecycle.jpg)
+
+That's basics of understanding the Vue 3 instance. You learned how to create a Vue instance, explored its key properties and methods, and understood lifecycle hooks. These concepts form the foundation of any Vue application.
+
+# Data Binding and Interpolation
+
+
+Data binding and interpolation are fundamental concepts in Vue.js that allow you to dynamically display data in your templates.
+
+
+## Interpolation
+
+Copy the following code in ```src/App.vue```
+
+```
+<template>
+  <div id="app">
+    <h1>{{ message }}</h1>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello, Vue 3!'
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+```
+
+In this example, the ```message``` data property is bound to the DOM using interpolation.
+
+## Data Binding
+
+Copy the following code in ```src/App.vue```
+
+```
+
+<template>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <a v-bind:href="url">Visit Vue.js</a>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello, Vue 3!',
+      url: 'https://vuejs.org'
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+```
+
+Here, the ```v-bind:href``` directive binds the ```url``` data property to the ```href``` attribute of the anchor tag.
+
+## Binding Data to Classes and Styles
+
+Copy the following code in ```src/App.vue```
+
+```
+<template>
+  <div id="app">
+    <h1 :class="headingClass">{{ message }}</h1>
+    <p :style="paragraphStyle">This is a styled paragraph.</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello, Vue 3!',
+      headingClass: 'heading',
+      paragraphStyle: {
+        color: 'blue',
+        fontSize: '20px'
+      }
+    }
+  }
+}
+</script>
+
+<style>
+.heading {
+  color: red;
+}
+</style>
+
+
+```
+
+* The :class binding dynamically applies the headingClass to the <h1> element.
+* The :style binding applies inline styles from the paragraphStyle object to the <p> element.
+
+## Two-Way Data Binding with v-model
+
+Copy the following code into ```src/App.vue```
+
+```
+<template>
+  <div id="app">
+    <h1>{{ message }}</h1>
+    <input v-model="message" placeholder="Edit me">
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello, Vue 3!'
+    }
+  }
+}
+</script>
+
+```
+
+With ```v-model```, changes to the input field update the message data property, and vice versa.
