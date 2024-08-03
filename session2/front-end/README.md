@@ -227,5 +227,9 @@ export default {
 
 ```
 
+The front-end looks as follow:
+
+
+![Methods & Methods](../help_images/vue3-properties-methods.png)
 
  

@@ -1,17 +1,30 @@
 <template>
-  <div id="app">
+
+<div id="app">
     <h1>{{ message }}</h1>
+    <p>Counter: {{ counter }}</p>
+    <button @click="incrementCounter">Increment</button>
   </div>
+
 </template>
 
 <script>
+
 export default {
   data() {
     return {
-      message: 'Hello, Vue 3!'
+      message: 'Hello, Vue 3!',
+      counter: 0
+    }
+  },
+  methods: {
+    incrementCounter() {
+      this.counter++;
     }
   }
 }
+
+
 </script>
 
 <style>
