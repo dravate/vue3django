@@ -437,3 +437,173 @@ export default {
 ```
 
 With ```v-model```, changes to the input field update the message data property, and vice versa.
+
+
+# Directives: v-bind, v-model, v-if, v-for, v-show
+
+
+Let's dive into a some of the essential ```Vue.js``` directives: ```v-bind```, ```v-model```, ```v-if```, ```v-for```, and ```v-show```.
+## v-bind
+
+Copy following code at ```src/App.vue```
+
+```
+
+<template>
+  <div>
+    <a v-bind:href="url">Visit Dravate Courses</a>
+    <!-- Shorthand syntax -->
+    <a :href="url">Visit Dravate Course</a>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      url: 'https://dravate.com/courses'
+    };
+  }
+};
+</script>
+
+```
+
+
+The v-bind directive is used to bind an attribute to an expression. This is often used to bind HTML attributes to Vue data properties.
+
+
+
+## v-model
+
+Copy the following code at ``` src/App.vue```
+
+```
+
+<template>
+  <div>
+    <input v-model="message" placeholder="Type a message">
+    <p>The message is: {{ message }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: ''
+    };
+  }
+};
+</script>
+
+```
+The ```v-model``` directive creates a two-way binding on form input, textarea, and select elements. This is useful for handling user input.
+
+
+##  v-if
+
+The ```v-if``` directive is used to conditionally render a block. The block will only be rendered if the directive's expression returns a truthy value.
+
+Copy the following code into ```src/App.vue```
+
+```
+<template>
+  <div>
+    <p v-if="seen">Now you see me</p>
+    <button @click="toggleSeen">Toggle Seen</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      seen: true
+    };
+  },
+  methods: {
+    toggleSeen() {
+      this.seen = !this.seen;
+    }
+  }
+};
+</script>
+
+```
+
+
+## v-for
+
+
+The ```v-for```  directive is used to render a list of items by iterating over an array.
+
+
+Copy the following code at ```src/App.vue```
+
+```
+
+<template>
+  <div>
+    <ul>
+      <li v-for="(item, index) in items" :key="index">{{ item }}</li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      items: ['Apple', 'Banana', 'Cherry']
+    };
+  }
+};
+</script>
+
+```
+
+
+## v-show
+
+
+The ```v-show``` directive is similar to ```v-if```, but instead of conditionally rendering the element, it toggles the element's visibility using the display CSS property.
+
+Copy the following code into ```src/App.vue```
+
+```
+<template>
+  <div>
+    <p v-show="visible">Now you see me</p>
+    <button @click="toggleVisible">Toggle Visible</button>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      visible: true
+    };
+  },
+  methods: {
+    toggleVisible() {
+      this.visible = !this.visible;
+    }
+  }
+};
+</script>
+
+
+```
+
+
+
+* ```v-bind:``` Binds an attribute to a dynamic value.
+* ```v-model:``` Creates two-way binding for form inputs.
+* ```v-if:``` Conditionally renders elements.
+* ```v-for:``` Renders a list of items.
+* ```v-show:``` Toggles the visibility of an element.
+These directives are fundamental to working with Vue.js and can be combined to create dynamic and interactive user interfaces.
+
+
