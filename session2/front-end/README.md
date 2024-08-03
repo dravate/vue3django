@@ -104,3 +104,25 @@ After that
 
 
 ```
+
+This starts the Vue3 Application. You can access https://localhost:8080/ in browser, it shows the default Application. 
+
+
+# Creating a Vue Instance
+
+Open ``` src/main.js``` , you will see the following code
+
+```
+
+import { createApp } from 'vue'
+import App from './App.vue'
+createApp(App).mount('#app')
+
+```
+
+This code imports createApp from vue, also imports the root component (App.vue), 
+The code creates the Vue instance and mounts that on DOM element with the id "app" 
+
+
+
+
