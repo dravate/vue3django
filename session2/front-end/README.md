@@ -1,12 +1,27 @@
+- [Session 2. Introduction to Course](#)
+        - [What is Vue3?](#)
+
+# Session . Introduction to Course
+
 Open Terminal
-Run the command npm install -g @vue/cli
-Verify the installation by running vue --version
+Run the command 
 
+```
+%npm install -g @vue/cli
+```
 
-sopanshewale@Rutujas-MacBook-Pro front-end % vue --version 
+Verify the installation by running 
+
+```
+%vue --version
 @vue/cli 5.0.8
 
+```
 
+Now start the Sample Application 
+
+```
+%vue create sampleapp 
 
 Vue CLI v5.0.8
 ? Please pick a preset: (Use arrow keys)
@@ -71,10 +86,13 @@ Run `npm audit` for details.
  $ npm run serve
 
 
+```
 
+After that 
 
-
- DONE  Compiled successfully in 1800ms                                                                                                                                                          6:09:02 PM
+```
+%cd sampleapp 
+%npm run serve
 
 
   App running at:
@@ -85,3 +103,4 @@ Run `npm audit` for details.
   To create a production build, run npm run build.
 
 
+```
