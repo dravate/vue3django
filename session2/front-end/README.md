@@ -175,11 +175,11 @@ At browser you can see following:
 Let's explore some of the key properties and methods of a Vue instance.
 
 * Data
- - Data properties are reactive, meaning Vue will react to changes and update the DOM accordingly
+- Data properties are reactive, meaning Vue will react to changes and update the DOM accordingly
 *Methods
- - Methods are functions defined within the component that can be called from the template or other parts of the component.
+- Methods are functions defined within the component that can be called from the template or other parts of the component.
 * Computed Properties
- - Computed properties are cached based on their dependencies and only re-evaluate when those dependencies change.
+- Computed properties are cached based on their dependencies and only re-evaluate when those dependencies change.
 
 copy the  the following code in ```src/App.vue```:
 (The code is alway available in ```src/App.vue.2```)
