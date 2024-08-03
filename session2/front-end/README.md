@@ -129,3 +129,43 @@ The code creates the Vue instance and mounts that on DOM element with the id "ap
 ![Root Component Image](../help_images/vue3-django-root.jpg)
 
 
+#  Hello Vue3 
+
+Copy the following code at ```src/App.vue``` 
+(you can also copy ```src/App.vue.1``` to ```src/App.vue```) 
+
+```
+
+<template>
+  <div id="app">
+    <h1>{{ message }}</h1>
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello, Vue 3!'
+    }
+  }
+}
+</script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
+
+```
+
+At browser you can see following: 
+
+![Hello Vue3](../help_images/hello_vue.png)
+ 
