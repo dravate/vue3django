@@ -1,7 +1,14 @@
 <template>
 
     <div :class="['navbar',  responsive ? 'responsive' : '']">
-        <a href="#">GFG</a>
+        <a href="#">
+
+
+<svg width="24px" height="24px" viewBox="0 0 32 32" fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+<path d="M2 4L16 28L30 4H24.5L16 18.5L7.5 4H2Z" fill="#41B883"/>
+<path d="M7.5 4L16 18.5L24.5 4H19.5L16.0653 10.0126L12.5 4H7.5Z" fill="#35495E"/>
+</svg>
+        </a>
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
@@ -52,16 +59,16 @@ export default {
 
     .navbar {
         overflow: hidden;
-        background-color: green;
+        background-color: whitesmoke;
     }
 
     .navbar a {
         float: left;
         display: block;
-        color: white;
+        color: black;
         text-align: center;
         padding: 14px 20px;
-        text-decoration: none;
+        text-shadow: 0.5px 0.5px gray;
     }
 
     .navbar a:hover {
@@ -79,6 +86,8 @@ export default {
         }
 
         .navbar button.icon {
+            width:50px;
+            height: 50px; 
             float: right;
             display: block;
         }
