@@ -31,8 +31,7 @@ In web development, routing refers to the process of routing HTTP requests to th
 Vue's routing is handled by the Vue Router package. If your web application or website is developed with Vue and has numerous pages that users must switch between, you will need Vue Router.
 
 
-'''
-
+```
 
 % vue create route
 
