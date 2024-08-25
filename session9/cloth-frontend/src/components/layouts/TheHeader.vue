@@ -59,7 +59,7 @@
           >
             <li>
               <a class="md:p-4 py-2 block hover:text-purple-400" href="#"
-                >Features</a
+                >Products</a
               >
             </li>
             <li>
@@ -85,6 +85,16 @@
               >
              <button href="#" v-else @click="logout"  class="md:p-4 py-2 block hover:text-purple-400 text-purple-500"> Logout </button> 
             </li>
+
+            <li>
+              <a v-if="!is_logged"
+                class="md:p-4 py-2 block hover:text-purple-400 text-purple-500"
+                href="/register"
+                >Registration</a
+              >
+          
+            </li>
+
           </ul>
         </div>
     </nav>
